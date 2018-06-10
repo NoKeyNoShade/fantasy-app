@@ -17,6 +17,7 @@ class App extends React.Component<Props, State> {
 
     this.state = {
       message: '',
+
     };
   }
 
