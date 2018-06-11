@@ -1,13 +1,17 @@
 [ignore]
+node_modules
 
 [include]
 
 [libs]
+/node_modules/fbjs/flow/lib
 
 [lints]
 
 [options]
 module.system.node.resolve_dirname=lib
 module.system.node.resolve_dirname=node_modules
+module.ignore_non_literal_requires=true
+suppress_type=$FlowIssu
 
 [strict]

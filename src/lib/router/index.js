@@ -1,10 +1,7 @@
-// @flow
-const express = require('express');
+const appRouter = require('./app-router');
+const apiRouter = require('./api-router');
 
-const router = express.Router();
-
-router.get('/', (req: express.Request, res: express.Response) => {
-  res.status(200).json({ message: 'ELEGONZA' });
-});
-
-module.exports = router;
+module.exports = {
+  apiRouter,
+  appRouter,
+};
