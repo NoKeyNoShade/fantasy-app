@@ -1,22 +1,19 @@
 // @flow
 const express = require('express');
 const graphQLHTTP = require('express-graphql');
+const schema = require('../schema');
 
 const router = express.Router();
 
-router.use('/', graphQLHTTP(req => ({
+router.use('/graphql', graphQLHTTP(req => ({
   context: {
     session: req.session,
   },
-  schema: {},
-  formatError: err => err,
+  schema,
+  formatError: (err) => {
+    console.log(err);
+    return err;
+  },
 })));
-
-// Catch error
-router.use((err: string, req, res) => {
-  res.status(400).json({
-    message: err,
-  });
-});
 
 module.exports = router;

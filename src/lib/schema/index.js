@@ -10,10 +10,10 @@ const schema = new GraphQLSchema({
     name: 'Root',
     fields: query,
   }),
-  mutation: new GraphQLObjectType({
-    name: 'Mutation',
-    fields: {},
-  }),
+  // mutation: new GraphQLObjectType({
+  //   name: 'Mutation',
+  //   fields: {},
+  // }),
 });
 
 module.exports = schema;

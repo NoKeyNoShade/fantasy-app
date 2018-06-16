@@ -1,5 +1,5 @@
 // @flow
-import * as React from 'react';
+import React from 'react';
 
 type Props = {};
 
@@ -10,6 +10,7 @@ type State = {
 type Resp = {
   message: string,
 };
+
 
 class App extends React.Component<Props, State> {
   constructor(props: Props) {

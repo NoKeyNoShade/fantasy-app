@@ -10,7 +10,7 @@ function getLeagues() {
   };
 
   return new Promise((resolve, reject) => dbPool.query(q)
-    .then(resp => resp.rows)
+    .then(resp => resolve(resp.rows))
     .catch(err => reject(err)));
 }
 
