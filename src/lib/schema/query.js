@@ -1,7 +1,9 @@
-const league = require('./league'); // eslint-disable-line import/no-unresolved
+const league = require('./league');
+const users = require('./user');
 
 const query = {
   getLeagues: league.getLeagues,
+  getUsersByLeague: users.getUsersByLeague,
 };
 
 module.exports = query;
