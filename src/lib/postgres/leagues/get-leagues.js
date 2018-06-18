@@ -1,4 +1,4 @@
-const dbPool = require('./db');
+const dbPool = require('../db');
 
 function getLeagues() {
   const q = {

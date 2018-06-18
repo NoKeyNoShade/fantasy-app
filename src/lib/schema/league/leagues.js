@@ -3,14 +3,14 @@ const {
   GraphQLNonNull,
 } = require('graphql/type');
 
-const { getLeagues } = require('../../postgres');
+const { leagues } = require('../../postgres');
 
 const type = require('./type');
 
-const leagues = {
+const getLeagues = {
   type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(type))),
   description: 'get all the currently active leagues',
-  resolve: () => getLeagues().then(data => data),
+  resolve: () => leagues.getLeagues().then(data => data),
 };
 
-module.exports = leagues;
+module.exports = getLeagues;

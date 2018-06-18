@@ -4,11 +4,11 @@ const {
   GraphQLNonNull,
 } = require('graphql/type');
 
-const { getUsersByLeague } = require('../../postgres');
+const { users } = require('../../postgres');
 
 const type = require('./type');
 
-const users = {
+const usersByLeague = {
   type: new GraphQLNonNull(new GraphQLList(new GraphQLNonNull(type))),
   description: 'get all the users associated with a specific league',
   args: {
@@ -17,7 +17,7 @@ const users = {
       description: 'the league ID to get all the users for.',
     },
   },
-  resolve: (_, params) => getUsersByLeague(params.leagueId).then(data => data),
+  resolve: (_, params) => users.getUsersByLeague(params.leagueId).then(data => data),
 };
 
-module.exports = users;
+module.exports = usersByLeague;

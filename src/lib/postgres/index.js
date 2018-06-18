@@ -1,7 +1,7 @@
-const getLeagues = require('./get-leagues');
-const getUsersByLeague = require('./get-users-by-league');
+const users = require('./users');
+const leagues = require('./leagues');
 
 module.exports = {
-  getLeagues,
-  getUsersByLeague,
+  users,
+  leagues,
 };

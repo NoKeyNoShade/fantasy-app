@@ -4,6 +4,7 @@
 [include]
 
 [libs]
+./custom-defs/
 /node_modules/fbjs/flow/lib
 
 [lints]
